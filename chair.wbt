@@ -1,0 +1,202 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.6082205288015846 0.7836295198732692 0.1264617093333407 0.518709048975184
+  position 0.9490457869501525 1.0403155157334623 1.9585993776222193
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+DEF Banch Solid {
+  translation 0 0.675 0
+  children [
+    DEF CHAIR Group {
+      children [
+        DEF Base Shape {
+          appearance PBRAppearance {
+            baseColor 0.9137254901960784 0.7254901960784313 0.43137254901960786
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.05
+            radius 0.15
+          }
+        }
+        DEF Small_str_P Transform {
+          translation 0 -0.04 0.09
+          children [
+            Shape {
+              appearance DEF STR_COLOR PBRAppearance {
+                baseColor 0.9607843137254902 0.4745098039215686 0
+                metalness 0
+              }
+              geometry DEF SMALL_S Box {
+                size 0.15 0.03 0.03
+              }
+            }
+          ]
+        }
+        DEF Small_str Transform {
+          translation 0.09 -0.04 0
+          rotation 0 1 0 1.5708
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE SMALL_S
+            }
+          ]
+        }
+        DEF Small_str Transform {
+          translation -0.09 -0.04 0
+          rotation 0 1 0 1.5708
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE SMALL_S
+            }
+          ]
+        }
+        DEF Small_str Transform {
+          translation 0 -0.04 -0.09
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE SMALL_S
+            }
+          ]
+        }
+        DEF Cyl_P Transform {
+          translation 0.13224587120968917 -0.3678238695197451 -0.13224587120968917
+          rotation 0.7071067811865475 0 0.7071067811865475 0.25
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry DEF G_CYL Cylinder {
+                height 0.64
+                radius 0.02
+              }
+            }
+          ]
+        }
+        DEF Cyl Transform {
+          translation 0.132246 -0.367824 0.132246
+          rotation -0.7071067811865476 0 0.7071067811865476 0.25
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE G_CYL
+            }
+          ]
+        }
+        DEF Cyl Transform {
+          translation -0.132246 -0.367824 0.132246
+          rotation -0.7071066717798298 0 -0.7071068905932484 0.25
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE G_CYL
+            }
+          ]
+        }
+        DEF Cyl Transform {
+          translation -0.132246 -0.367824 -0.132246
+          rotation 0.7071067811865476 0 -0.7071067811865476 0.25
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE G_CYL
+            }
+          ]
+        }
+        DEF Big_Str_p Transform {
+          translation 0 -0.30000000000000004 -0.155
+          rotation 1 0 0 0.22
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry DEF BIG_STR Box {
+                size 0.28 0.03 0.03
+              }
+            }
+          ]
+        }
+        DEF Big_Str Transform {
+          translation 0 -0.30000000000000004 0.155
+          rotation 1 0 0 -0.22
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE BIG_STR
+            }
+          ]
+        }
+        DEF Big_Str Transform {
+          translation 0.155 -0.30000000000000004 0
+          rotation 0 1 0 1.594876898103297
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE BIG_STR
+            }
+          ]
+        }
+        DEF Big_Str Transform {
+          translation -0.155 -0.30000000000000004 0
+          rotation 0 1 0 1.594876898103297
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE BIG_STR
+            }
+          ]
+        }
+        DEF Base Transform {
+          translation 0.19 -0.67 0.19
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry DEF BASE Cylinder {
+                height 0.01
+                radius 0.05
+              }
+            }
+          ]
+        }
+        DEF Base Transform {
+          translation -0.19 -0.67 0.19
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE BASE
+            }
+          ]
+        }
+        DEF Base Transform {
+          translation 0.19 -0.67 -0.19
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE BASE
+            }
+          ]
+        }
+        DEF Base Transform {
+          translation -0.19 -0.67 -0.19
+          children [
+            Shape {
+              appearance USE STR_COLOR
+              geometry USE BASE
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  boundingObject USE CHAIR
+  physics Physics {
+  }
+}
